@@ -19,17 +19,19 @@ public class MyResource {
      * @return String that will be returned as a text/plain response.
      */
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getIt() {
+    @Produces(MediaType.APPLICATION_JSON)
+    public User getIt() {
+        User user=new User();
+        user.setFirst_name("nnnn");
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/chat", "root", "truckway");
         }catch (Exception e){
             e.printStackTrace();
-            return "exception";
+            //return "exception";
         }
-        return "Connected!";
+        return user;
     }
 
 }
