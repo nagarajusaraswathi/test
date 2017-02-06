@@ -4,6 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import java.sql.*;
 
 /**
  * Root resource (exposed at "myresource" path)
@@ -20,6 +21,15 @@ public class MyResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
-        return "Got it!";
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(
+                    "jdbc:mysql://104.198.184.234:3306/chat", "root", "truckway");
+        }catch (Exception e){
+            e.printStackTrace();
+            return "exception";
+        }
+        return "Connected!";
     }
+
 }
