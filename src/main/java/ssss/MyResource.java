@@ -24,7 +24,7 @@ public class MyResource {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(
-                    "jdbc:mysql://104.198.184.234:3306/chat", "root", "truckway");
+                    "jdbc:mysql://104.198.184.234:3306/chat", "root", "truckwayy");
         }catch (Exception e){
             e.printStackTrace();
             return "exception";
