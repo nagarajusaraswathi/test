@@ -20,7 +20,7 @@ public class MyResource {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public User getIt() {
+    public String getIt() {
         User user=new User();
         user.setFirst_name("nnnn");
         try {
@@ -31,7 +31,7 @@ public class MyResource {
             e.printStackTrace();
             //return "exception";
         }
-        return user;
+        return "rrr";
     }
 
 }
