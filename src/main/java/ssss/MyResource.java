@@ -19,8 +19,8 @@ public class MyResource {
      * @return String that will be returned as a text/plain response.
      */
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getIt() {
+    @Produces(MediaType.APPLICATION_JSON)
+    public User getIt() {
         User user=new User();
         user.setFirst_name("nnnn");
         try {
@@ -31,7 +31,7 @@ public class MyResource {
             e.printStackTrace();
             //return "exception";
         }
-        return "rrr";
+        return user;
     }
 
 }

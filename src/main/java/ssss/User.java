@@ -1,11 +1,13 @@
 package ssss;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.sql.Timestamp;
 import java.util.Date;
 
 /**
  * Created by Synycs Solutions on 2/6/2017.
  */
+@XmlRootElement
 public class User {
     private int id;
     private String username;
