@@ -24,9 +24,9 @@ public class MyResource {
         User user=new User();
         user.setFirst_name("nnnn");
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/chat", "root", "truckway");
+          //  Class.forName("com.mysql.jdbc.Driver");
+           // Connection con = DriverManager.getConnection(
+                 //   "jdbc:mysql://localhost:3306/chat", "root", "truckway");
         }catch (Exception e){
             e.printStackTrace();
             //return "exception";
